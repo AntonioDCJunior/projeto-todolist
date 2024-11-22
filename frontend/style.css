@@ -1,0 +1,72 @@
+/* Estilo para a lista de tarefas */
+ul#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.task-text {
+    flex-grow: 1; /* O texto da tarefa vai ocupar o espaço restante */
+    padding-right: 10px;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form input {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}

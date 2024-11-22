@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend  # Caminho do diretório do backend
+    ports:
+      - "5000:5000"  # Porta exposta do backend
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_DEBUG=1
+    networks:
+      - todo-app-network
+
+  frontend:
+    build: ./frontend  # Caminho do diretório do frontend
+    ports:
+      - "80:80"  # Porta exposta do frontend
+    networks:
+      - todo-app-network
+
+networks:
+  todo-app-network:
+    driver: bridge
