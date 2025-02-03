@@ -1,23 +1,12 @@
-version: '3.8'
-
+version: '3'
 services:
   backend:
-    build: ./backend  # Caminho do diretório do backend
+    build: ./backend
     ports:
-      - "5000:5000"  # Porta exposta do backend
-    environment:
-      - FLASK_APP=app.py
-      - FLASK_DEBUG=1
-    networks:
-      - todo-app-network
-
+      - "5000:5000"
   frontend:
-    build: ./frontend  # Caminho do diretório do frontend
+    image: nginx:alpine
+    volumes:
+      - ./frontend:/usr/share/nginx/html
     ports:
-      - "80:80"  # Porta exposta do frontend
-    networks:
-      - todo-app-network
-
-networks:
-  todo-app-network:
-    driver: bridge
+      - "80:80"

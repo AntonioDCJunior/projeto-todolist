@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: white;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Alinha os botões à direita */
+    margin-top: 20px; /* Espaçamento acima dos botões */
+}
+
+button {
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px; /* Espaçamento entre os botões */
+}
+
+/* Estilo do botão Adicionar */
+button.add {
+    background-color: #007bff; /* Azul para adicionar */
+}
+
+button.add:hover {
+    background-color: #0056b3; /* Azul escuro ao passar o mouse */
+}
+
+/* Estilo do botão Concluir */
+button.complete {
+    background-color: #28a745; /* Verde para concluir */
+}
+
+button.complete:hover {
+    background-color: #218838; /* Verde escuro ao passar o mouse */
+}
+
+/* Estilo do botão Atualizar */
+button.update {
+    background-color: #ffc107; /* Amarelo para atualizar */
+}
+
+button.update:hover {
+    background-color: #e0a800; /* Amarelo escuro ao passar o mouse */
+}
+
+/* Estilo do botão Deletar */
+button.delete {
+    background-color: #dc3545; /* Vermelho para deletar */
+}
+
+button.delete:hover {
+    background-color: #c82333; /* Vermelho escuro ao passar o mouse */
+}
