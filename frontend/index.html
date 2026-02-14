@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Ícones (se quiser os ícones de fonte awesome; opcional)
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    -->
+
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1>To-Do List</h1>
+
+      <div class="input-row">
+        <input type="text" id="itemInput" placeholder="Nova tarefa" />
+        <button class="add" onclick="createTask()">Adicionar</button>
+      </div>
+
+      <div class="filters">
+        <button
+          class="filter active"
+          data-filter="all"
+          onclick="changeFilter('all')"
+        >
+          Todas
+        </button>
+        <button
+          class="filter"
+          data-filter="pending"
+          onclick="changeFilter('pending')"
+        >
+          Pendentes
+        </button>
+        <button
+          class="filter"
+          data-filter="done"
+          onclick="changeFilter('done')"
+        >
+          Concluídas
+        </button>
+      </div>
+
+      <button class="share" onclick="shareTasks()">Compartilhar lista</button>
+
+      <ul id="taskList"></ul>
+    </div>
+  </body>
+</html>
