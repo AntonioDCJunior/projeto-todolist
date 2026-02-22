@@ -76,7 +76,6 @@ button {
   font-size: 0.85rem;
 }
 
-/* Botão Adicionar */
 button.add {
   background-color: #007bff;
 }
@@ -85,7 +84,6 @@ button.add:hover {
   background-color: #0056b3;
 }
 
-/* Botão Concluir/Reabrir */
 button.complete {
   background-color: #28a745;
 }
@@ -94,7 +92,6 @@ button.complete:hover {
   background-color: #218838;
 }
 
-/* Botão Atualizar */
 button.update {
   background-color: #ffc107;
   color: #212529;
@@ -104,7 +101,6 @@ button.update:hover {
   background-color: #e0a800;
 }
 
-/* Botão Deletar */
 button.delete {
   background-color: #dc3545;
 }
@@ -113,7 +109,6 @@ button.delete:hover {
   background-color: #c82333;
 }
 
-/* Filtros */
 .filters {
   margin: 10px 0;
   display: flex;
@@ -134,7 +129,6 @@ button.delete:hover {
   background-color: #343a40;
 }
 
-/* Compartilhar */
 button.share {
   margin-top: 5px;
   background-color: #17a2b8;

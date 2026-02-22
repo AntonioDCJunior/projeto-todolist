@@ -180,7 +180,6 @@ function changeFilter(filter) {
   fetchTasks();
 }
 
-// Compartilhar lista de tarefas
 async function shareTasks() {
   try {
     const response = await fetch(apiUrl);
@@ -218,5 +217,4 @@ async function shareTasks() {
   }
 }
 
-// Carrega as tarefas ao abrir a página
 window.onload = fetchTasks;

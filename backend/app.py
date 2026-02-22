@@ -8,18 +8,14 @@ def create_app():
     app = Flask(__name__)
     CORS(app)
 
-    # Caminho do arquivo do banco (dentro da pasta backend)
     db_path = os.path.join(os.path.dirname(__file__), "tasks.db")
     app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{db_path}"
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
     db.init_app(app)
 
-    # Cria as tabelas se não existirem
     with app.app_context():
         db.create_all()
-
-    # --------- ROTAS ---------
 
     @app.route("/tasks", methods=["GET"])
     def get_tasks():
@@ -30,7 +26,7 @@ def create_app():
         - /tasks?status=pending
         - /tasks?status=done
         """
-        status = request.args.get("status")  # all | pending | done
+        status = request.args.get("status")
 
         query = Task.query
 
@@ -112,5 +108,4 @@ def create_app():
 app = create_app()
 
 if __name__ == "__main__":
-    # Em dev local; dentro do container também será esse comando
     app.run(host="0.0.0.0", port=5000, debug=True)
